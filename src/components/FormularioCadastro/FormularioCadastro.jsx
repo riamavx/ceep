@@ -4,15 +4,25 @@ import "./formularioCadastro.css"
 
 
 class FormularioCadastro extends Component{
+
+    handleMudancaTitulo(evento){
+        console.log(evento.target.value)
+    }
+
     render(){
         return(
             <form className="form-cadastro">
+
       <input type="text"
        placeholder="Título"
-       className="form-cadastro_input"/>
+       className="form-cadastro_input"
+       onChange= {this.handleMudancaTitulo}/>
+       
+
       <textarea rows={15}
        placeholder="Escreva algo!"
        className="form-cadastro_input"/>
+
       <button className="form-cadastro_input form-cadastro_submit">
        Criar nota
        </button>
